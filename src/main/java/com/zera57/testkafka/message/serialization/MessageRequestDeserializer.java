@@ -18,7 +18,6 @@ public class MessageRequestDeserializer implements Deserializer<MessageRequest> 
                 System.out.println("Null received at deserializing");
                 return null;
             }
-            System.out.println("Deserializing...");
             return objectMapper.readValue(new String(data, "UTF-8"), MessageRequest.class);
         } catch (Exception e) {
             throw new SerializationException("Error when deserializing byte[] to MessageDto");

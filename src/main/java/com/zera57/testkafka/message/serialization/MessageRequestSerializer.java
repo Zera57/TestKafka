@@ -26,7 +26,6 @@ public class MessageRequestSerializer implements Serializer<MessageRequest> {
                 System.out.println("Null received at serializing");
                 return null;
             }
-            System.out.println("Serializing...");
             return objectMapper.writeValueAsBytes(messageRequest);
         } catch (Exception e) {
             throw new SerializationException("Error when serializing MessageDto to byte[]");
