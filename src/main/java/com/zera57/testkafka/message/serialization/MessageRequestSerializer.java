@@ -20,7 +20,7 @@ public class MessageRequestSerializer implements Serializer<MessageRequest> {
     }
 
     @Override
-    public byte[] serialize(String s, MessageRequest messageRequest) {
+    public byte[] serialize(String topic, MessageRequest messageRequest) {
         try {
             if (messageRequest == null){
                 System.out.println("Null received at serializing");
